@@ -1,0 +1,578 @@
+INFO - 2024-12-14 04:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 04:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 04:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 04:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-14 04:20:36 --> LogicException: No validation rules for the placeholder: "id". You must set the validation rules for the field. See <https://codeigniter4.github.io/userguide/libraries/validation.html#validation-placeholders>.
+[Method: POST, Route: staff/update]
+in SYSTEMPATH\Validation\Validation.php on line 806.
+ 1 SYSTEMPATH\Validation\Validation.php(158): CodeIgniter\Validation\Validation->fillPlaceholders([...], [...])
+ 2 APPPATH\Controllers\UserInfoController.php(117): CodeIgniter\Validation\Validation->run()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserInfoController->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfoController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 05:26:06 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Model.php on line 930
+[Method: GET, Route: project/fetch]
+in SYSTEMPATH\Database\BaseBuilder.php on line 398.
+ 1 SYSTEMPATH\Model.php(930): CodeIgniter\Database\BaseBuilder->select('users.username, projects.project_name, projects.description, projects.budget, projects.start_date, projects.end_date, projects.project_status', 'projects.project_files')
+ 2 APPPATH\Controllers\ProjectController.php(146): CodeIgniter\Model->__call('select', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->fetchAll()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 05:26:09 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Model.php on line 930
+[Method: GET, Route: project/fetch]
+in SYSTEMPATH\Database\BaseBuilder.php on line 398.
+ 1 SYSTEMPATH\Model.php(930): CodeIgniter\Database\BaseBuilder->select('users.username, projects.project_name, projects.description, projects.budget, projects.start_date, projects.end_date, projects.project_status', 'projects.project_files')
+ 2 APPPATH\Controllers\ProjectController.php(146): CodeIgniter\Model->__call('select', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->fetchAll()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 05:26:19 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Model.php on line 930
+[Method: GET, Route: project/fetch]
+in SYSTEMPATH\Database\BaseBuilder.php on line 398.
+ 1 SYSTEMPATH\Model.php(930): CodeIgniter\Database\BaseBuilder->select('users.username, projects.project_name, projects.description, projects.budget, projects.start_date, projects.end_date, projects.project_status', 'projects.project_files')
+ 2 APPPATH\Controllers\ProjectController.php(146): CodeIgniter\Model->__call('select', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->fetchAll()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 05:28:28 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Model.php on line 930
+[Method: GET, Route: project/fetch]
+in SYSTEMPATH\Database\BaseBuilder.php on line 398.
+ 1 SYSTEMPATH\Model.php(930): CodeIgniter\Database\BaseBuilder->select('users.username, projects.project_name, projects.description, projects.budget, projects.start_date, projects.end_date, projects.project_status', 'projects.project_files')
+ 2 APPPATH\Controllers\ProjectController.php(146): CodeIgniter\Model->__call('select', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->fetchAll()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 05:52:52 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "["
+[Method: GET, Route: uploads/%5B]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('uploads/[')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('uploads/[')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 05:53:10 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "["
+[Method: GET, Route: uploads/%5B]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('uploads/[')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('uploads/[')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 05:54:47 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "["
+[Method: GET, Route: uploads/%5B]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('uploads/[')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('uploads/[')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 05:55:06 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "["
+[Method: GET, Route: uploads/%5B]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('uploads/[')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('uploads/[')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 06:01:58 --> ErrorException: Undefined variable $project
+[Method: GET, Route: project]
+in APPPATH\Views\project\project.php on line 144.
+ 1 APPPATH\Views\project\project.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $project', 'C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\app\\Views\\project\\project.php', 144)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\app\\Views\\project\\project.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('project/project', [], true)
+ 5 APPPATH\Controllers\ProjectController.php(17): view('project/project', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 06:03:07 --> ErrorException: Undefined variable $project
+[Method: GET, Route: project]
+in APPPATH\Views\project\project.php on line 144.
+ 1 APPPATH\Views\project\project.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $project', 'C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\app\\Views\\project\\project.php', 144)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\app\\Views\\project\\project.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('project/project', [], true)
+ 5 APPPATH\Controllers\ProjectController.php(17): view('project/project', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 06:03:42 --> ErrorException: Undefined variable $project
+[Method: GET, Route: project]
+in APPPATH\Views\project\project.php on line 144.
+ 1 APPPATH\Views\project\project.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $project', 'C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\app\\Views\\project\\project.php', 144)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\app\\Views\\project\\project.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('project/project', [], true)
+ 5 APPPATH\Controllers\ProjectController.php(17): view('project/project', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 06:03:49 --> ErrorException: Undefined variable $project
+[Method: GET, Route: project]
+in APPPATH\Views\project\project.php on line 144.
+ 1 APPPATH\Views\project\project.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $project', 'C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\app\\Views\\project\\project.php', 144)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\app\\Views\\project\\project.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('project/project', [], true)
+ 5 APPPATH\Controllers\ProjectController.php(17): view('project/project', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 06:03:58 --> ErrorException: Undefined variable $project
+[Method: GET, Route: project]
+in APPPATH\Views\project\project.php on line 144.
+ 1 APPPATH\Views\project\project.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $project', 'C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\app\\Views\\project\\project.php', 144)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\app\\Views\\project\\project.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('project/project', [], true)
+ 5 APPPATH\Controllers\ProjectController.php(17): view('project/project', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 07:07:04 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: staff/delete/12]
+in APPPATH\Controllers\UserInfoController.php on line 203.
+ 1 APPPATH\Controllers\UserInfoController.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\app\\Controllers\\UserInfoController.php', 203)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserInfoController->delete('12')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfoController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 07:07:46 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: staff/delete/11]
+in APPPATH\Controllers\UserInfoController.php on line 203.
+ 1 APPPATH\Controllers\UserInfoController.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\app\\Controllers\\UserInfoController.php', 203)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserInfoController->delete('11')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInfoController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+INFO - 2024-12-14 07:38:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:38:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:38:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 07:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-14 08:03:32 --> mysqli_sql_exception: Unknown column 'users_info.profile_image' in 'field list' in C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `users`....', 0)
+#1 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sneha\codeigniter\admin_role\app\Controllers\ProjectController.php(178): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\CodeIgniter.php(933): App\Controllers\ProjectController->details('10')
+#8 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+#9 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\sneha\codeigniter\admin_role\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-12-14 08:03:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users_info.profile_image' in 'field list'
+[Method: GET, Route: project/details/10]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = :users_info.id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ProjectController.php(178): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->details('10')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 08:03:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users_info.profile_image' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = \'10\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = \'10\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = :users_info.id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\ProjectController.php(178): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->details('10')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 08:03:32 --> [Caused by] mysqli_sql_exception: Unknown column 'users_info.profile_image' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = \'10\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = \'10\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = \'10\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = :users_info.id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\ProjectController.php(178): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->details('10')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+ERROR - 2024-12-14 08:03:37 --> mysqli_sql_exception: Unknown column 'users_info.profile_image' in 'field list' in C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `users`....', 0)
+#1 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sneha\codeigniter\admin_role\app\Controllers\ProjectController.php(178): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\CodeIgniter.php(933): App\Controllers\ProjectController->details('10')
+#8 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+#9 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\sneha\codeigniter\admin_role\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-12-14 08:03:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users_info.profile_image' in 'field list'
+[Method: GET, Route: project/details/10]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = :users_info.id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ProjectController.php(178): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->details('10')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 08:03:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users_info.profile_image' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = \'10\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = \'10\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = :users_info.id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\ProjectController.php(178): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->details('10')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 08:03:37 --> [Caused by] mysqli_sql_exception: Unknown column 'users_info.profile_image' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = \'10\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = \'10\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = \'10\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = :users_info.id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\ProjectController.php(178): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->details('10')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+ERROR - 2024-12-14 08:03:45 --> mysqli_sql_exception: Unknown column 'users_info.profile_image' in 'field list' in C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `users`....', 0)
+#1 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sneha\codeigniter\admin_role\app\Controllers\ProjectController.php(178): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\CodeIgniter.php(933): App\Controllers\ProjectController->details('10')
+#8 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+#9 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\sneha\codeigniter\admin_role\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\sneha\codeigniter\admin_role\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-12-14 08:03:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users_info.profile_image' in 'field list'
+[Method: GET, Route: project/details/10]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = :users_info.id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\ProjectController.php(178): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->details('10')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 08:03:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users_info.profile_image' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = \'10\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = \'10\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = :users_info.id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\ProjectController.php(178): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->details('10')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 08:03:45 --> [Caused by] mysqli_sql_exception: Unknown column 'users_info.profile_image' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = \'10\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = \'10\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = \'10\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `users`.`email`, `users`.`username`, `users_info`.`profile_image`, `users_info`.`id`, `users_info`.`name`, `users_info`.`gender`, `users_info`.`address`, `users_info`.`city`, `users_info`.`phone_no`
+FROM `projects`
+JOIN `users` ON `users`.`id` = `users_info`.`user_id`
+WHERE `users_info`.`id` = :users_info.id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\ProjectController.php(178): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->details('10')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 08:06:48 --> ErrorException: Undefined array key "profile_image"
+[Method: GET, Route: project/details/10]
+in APPPATH\Controllers\ProjectController.php on line 181.
+ 1 APPPATH\Controllers\ProjectController.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profile_image"', 'C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\app\\Controllers\\ProjectController.php', 181)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->details('10')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 08:06:58 --> ErrorException: Undefined array key "profile_image"
+[Method: GET, Route: project/details/10]
+in APPPATH\Controllers\ProjectController.php on line 181.
+ 1 APPPATH\Controllers\ProjectController.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profile_image"', 'C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\app\\Controllers\\ProjectController.php', 181)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProjectController->details('10')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProjectController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 08:13:18 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "["[\"1734161753_a3af94f9d76085ae6217.doc\"]"]"
+[Method: GET, Route: uploads/%5B%22%5B%5C%221734161753_a3af94f9d76085ae6217.doc%5C%22%5D%22%5D]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('uploads/["[\\"1734161753_a3af94f9d76085ae6217.doc\\"]"]')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('uploads/["[\\"1734161753_a3af94f9d76085ae6217.doc\\"]"]')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 08:14:59 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "["[\"1734161753_a3af94f9d76085ae6217.doc\"]"]"
+[Method: GET, Route: uploads/%5B%22%5B%5C%221734161753_a3af94f9d76085ae6217.doc%5C%22%5D%22%5D]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('uploads/["[\\"1734161753_a3af94f9d76085ae6217.doc\\"]"]')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('uploads/["[\\"1734161753_a3af94f9d76085ae6217.doc\\"]"]')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+CRITICAL - 2024-12-14 08:20:48 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "["
+[Method: GET, Route: uploads/%5B]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('uploads/[')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('uploads/[')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+INFO - 2024-12-14 08:36:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 08:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-14 08:39:31 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "["[\"[\\\"[\\\\\\\"[\\\\\\\\\\\\\\\"1734161799_060eee89c0052bb1c865.webp\\\\\\\\\\\\\\\"]\\\\\\\"]\\\"]\"]"]"
+[Method: GET, Route: uploads/%5B%22%5B%5C%22%5B%5C%5C%5C%22%5B%5C%5C%5C%5C%5C%5C%5C%22%5B%5C%5C%5C%5C%5C%5C%5C%5C%5C%5C%5C%5C%5C%5C%5C%221734161799_060eee89c0052bb1c865.webp%5C%5C%5C%5C%5C%5C%5C%5C%5C%5C%5C%5C%5C%5C%5C%22%5D%5C%5C%5C%5C%5C%5C%5C%22%5D%5C%5C%5C%22%5D%5C%22%5D%22%5D]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('uploads/["[\\"[\\\\\\"[\\\\\\\\\\\\\\"[\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"1734161799_060eee89c0052bb1c865.webp\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"]\\\\\\\\\\\\\\"]\\\\\\"]\\"]"]')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('uploads/["[\\"[\\\\\\"[\\\\\\\\\\\\\\"[\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"1734161799_060eee89c0052bb1c865.webp\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"]\\\\\\\\\\\\\\"]\\\\\\"]\\"]"]')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sneha\\codeigniter\\admin_role\\public\\index.php')
+INFO - 2024-12-14 08:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 09:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 09:00:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-14 09:00:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
