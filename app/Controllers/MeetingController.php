@@ -119,16 +119,29 @@ class MeetingController extends BaseController
     public function fetchAll()
     {
         $meetingModel = new MeetingModel();
+        $user_id = session()->get('user_id');
+        $role = session()->get('role');
 
-        $meetings = $meetingModel
-            ->select('meetings.id, meetings.meeting_title, meetings.meeting_date, meetings.start_time, meetings.end_time, projects.end_date,users.username, projects.project_name')
-            ->join('users', 'users.id = meetings.user_id')
-            ->join('projects', 'projects.id = meetings.project_id')
-            ->orderBy('meetings.id', 'DESC')
-            ->findAll();
+        if ($role == 2) {
+            $meetings = $meetingModel
+                ->select('meetings.id, meetings.meeting_title, meetings.meeting_date, meetings.start_time, meetings.end_time, projects.end_date, users.username, projects.project_name')
+                ->join('users', 'users.id = meetings.user_id')
+                ->join('projects', 'projects.id = meetings.project_id')
+                ->where('meetings.user_id', $user_id)
+                ->orderBy('meetings.id', 'DESC')
+                ->findAll();
+        } else {
+            $meetings = $meetingModel
+                ->select('meetings.id, meetings.meeting_title, meetings.meeting_date, meetings.start_time, meetings.end_time, projects.end_date, users.username, projects.project_name')
+                ->join('users', 'users.id = meetings.user_id')
+                ->join('projects', 'projects.id = meetings.project_id')
+                ->orderBy('meetings.id', 'DESC')
+                ->findAll();
+        }
 
         return $this->response->setJSON($meetings);
     }
+
     public function delete($id)
     {
         $meetingModel = new MeetingModel();

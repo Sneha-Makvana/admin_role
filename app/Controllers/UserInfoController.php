@@ -176,11 +176,13 @@ class UserInfoController extends Controller
         $users = $userInfoModel
             ->select('users.email, users_info.profile_image, users_info.id, users_info.name, users_info.gender, users_info.address, users_info.city, users_info.phone_no')
             ->join('users', 'users.id = users_info.user_id')
+            ->where('users.role', 2)
             ->orderBy('users_info.id', 'DESC')
             ->findAll();
 
         return $this->response->setJSON($users);
     }
+
 
     public function delete($id)
     {

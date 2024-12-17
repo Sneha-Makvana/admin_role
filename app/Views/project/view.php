@@ -6,9 +6,9 @@
     <div class="card">
         <div class="card-header row">
             <h3 class="mx-3">All Projects</h3>
-
+            <?php if (session()->get('role') == 1): ?>
             <a class="staff" href="<?= base_url('/project'); ?>" role="button"><button type="button" class="btn btn-dark btn-rounded">Add Project</button></a>
-
+            <?php endif; ?>
         </div>
         <div class="card-body">
             <table id="myTable" class="table table-striped table-hover table-active">
@@ -44,25 +44,34 @@
 
                         const projectFileUrl = projects.profile_image ? `<?= base_url('uploads/'); ?>${projects.project_files}` : '<?= base_url('public/uploads/customers/default-avatar.jpg'); ?>';
 
-                        rows += `
-                        <tr id="projects-${projects.id}">
-                            <td>${projects.project_name}</td>
-                            <td>${projects.budget}</td>
-                            <td>${projects.start_date}</td>
-                            <td>${projects.end_date}</td>
-                            <td>${projects.username}</td>
-                            <td>
-                                <a href="<?= base_url('/project/profile') ?>?id=${projects.id}">
-                                <i class='ik ik-eye f-18 mr-15 text-blue'></i>
-                                </a>
+                        let actionButtons = '';
+                        <?php if (session()->get('role') == 1): ?>
+                            actionButtons = `
+
                                 <a href="<?= base_url('/project') ?>?id=${projects.id}">
-                                <i class='ik ik-edit f-18 mr-15 text-green'></i>
+                                    <i class='ik ik-edit f-18 mr-15 text-green'></i>
                                 </a>
                                 <a href="javascript:void(0);" class="delete-btn" data-id="${projects.id}">
-                                <i class='ik ik-trash-2 f-18 mr-15 text-red'></i>
+                                    <i class='ik ik-trash-2 f-18 mr-15 text-red'></i>
                                 </a>
-                            </td>
-                        </tr>`;
+                            `;
+                        <?php endif; ?>
+
+                        rows += `
+                            <tr id="projects-${projects.id}">
+                                <td>${projects.project_name}</td>
+                                <td>${projects.budget}</td>
+                                <td>${projects.start_date}</td>
+                                <td>${projects.end_date}</td>
+                                <td>${projects.username}</td>
+                                <td>
+                                    <a href="<?= base_url('/project/profile') ?>?id=${projects.id}">
+                                        <i class='ik ik-eye f-18 mr-15 text-blue'></i>
+                                    </a>
+                                    ${actionButtons} <!-- Edit and delete buttons only for role 1 -->
+                                </td>
+                            </tr>
+                        `;
                     });
                     $('#myTable tbody').html(rows);
                     feather.replace();
@@ -84,9 +93,7 @@
                     success: function(response) {
                         if (response.success) {
                             $(`#projects-${projectId}`).remove();
-
                             loadProjects();
-
                             alert(response.message);
                         } else {
                             alert(response.message);

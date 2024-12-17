@@ -30,8 +30,9 @@
                             </div>
 
                             <div class="chat-container">
-                                <ul id="chat-box" class="chat-box chatContainerScroll"></ul>
+                                <ul id="chat-box" class="chat-box"></ul>
                                 <div class="sticky-bottom">
+                                    <div id="file-preview" class="file-preview-container"></div>
                                     <form id="message-form" class="form-group mt-3 mb-0 position-relative" enctype="multipart/form-data">
                                         <div class="d-flex">
                                             <textarea class="form-control" id="message" name="message" placeholder="Type your message here..." style="padding-right: 40px;"></textarea>
@@ -84,18 +85,18 @@
                                 '<?= base_url('uploads/'); ?>' + user.profile_image :
                                 'https://www.bootdey.com/img/Content/avatar/avatar1.png';
 
-                            const lastMessage = user.last_message ? user.last_message : 'No messages yet';
+                            const lastMessage = user.last_message ? user.last_message : '';
 
                             userHtml += `
-                            <li class="person" data-user-id="${user.id}" data-username="${user.name}">
-                                <div class="user">
-                                    <img src="${profileImage}" alt="${user.name}">
-                                </div>
-                                <p class="name-time">
-                                    <span class="name">${user.name}</span>
-                                    <span class="time">${lastMessage}</span>
-                                </p>
-                            </li>`;
+                        <li class="person" data-user-id="${user.id}" data-username="${user.name}">
+                            <div class="user">
+                                <img src="${profileImage}" alt="${user.name}">
+                            </div>
+                            <p class="name-time">
+                                <span class="name">${user.name}</span>
+                                <span class="time">${lastMessage}</span>
+                            </p>
+                        </li>`;
                         });
                         $('#users').html(userHtml);
                     } else {
@@ -107,6 +108,14 @@
                 }
             });
         }
+        let receiverId = null;
+
+        $(document).on('click', '.person', function() {
+            receiverId = $(this).data('user-id');
+            $('#receiver_id').val(receiverId);
+            $('.selected-user .name').text($(this).data('username'));
+            loadMessages(receiverId);
+        });
 
         function loadMessages(receiverId) {
             $.ajax({
@@ -114,57 +123,110 @@
                 type: "GET",
                 dataType: "json",
                 success: function(response) {
-                    if (response.success) {
-                        const messages = response.data;
-                        let messageHtml = '';
-                        messages.forEach(message => {
-                            messageHtml += `
-                            <li class="chat-message">
-                                <div class="message">${message.message}</div>
-                            </li>`;
-                        });
-                        $('#chat-box').html(messageHtml);
-                    } else {
-                        alert("Failed to load messages");
-                    }
+                    let messageHtml = '';
+                    const currentUserId = "<?= session()->get('user_id'); ?>";
+
+                    response.data.forEach(message => {
+                        const alignment = message.sender_id == currentUserId ? 'message-right' : 'message-left';
+                        const fileHtml = renderFiles(message.files);
+
+                        messageHtml += `
+                        <li class="chat-message ${alignment}">
+                        <div class="message-box">
+                        <p class="message-text">${message.message}</p>
+                        ${fileHtml}
+                        <span class="message-time">${message.sent_at}</span>
+                        </div>
+                        </li>`;
+                    });
+
+                    $('#chat-box').html(messageHtml);
                 },
                 error: function(xhr, status, error) {
                     console.error("Error loading messages:", error);
                 }
             });
         }
+        setInterval(function() {
+            if (receiverId) {
+                loadMessages(receiverId);
+            }
+        }, 1000);
 
-        $('#message-form').submit(function(event) {
-            event.preventDefault();
+        function renderFiles(files) {
+            let fileHtml = '';
+            if (files) {
+                const fileArray = files.split(',');
+                fileArray.forEach(file => {
+                    const fileType = file.split('.').pop().toLowerCase();
+                    const fileUrl = '<?= base_url('uploads/'); ?>' + file;
 
-            const message = $('#message').val();
-            const receiver_id = $('#receiver_id').val();
+                    if (['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(fileType)) {
+                        fileHtml += `<img src="${fileUrl}" alt="Image" class="message-image mx-2" style="height:70px;">`;
+                    } else if (fileType === 'pdf') {
+                        fileHtml += `<a href="${fileUrl}" target="_blank" class="file-link">View PDF</a>`;
+                    } else {
+                        fileHtml += `<a href="${fileUrl}" target="_blank" class="file-link">Download File</a>`;
+                    }
+                });
+            }
+            return fileHtml;
+        }
+        $('#file-input').on('change', function() {
+            const files = $(this)[0].files;
+            const fileListContainer = $('#file-preview');
+            fileListContainer.empty();
 
-            if (!message || !receiver_id) {
-                alert('Please select a user and type a message.');
-                return;
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                const fileType = file.type;
+                const fileName = file.name;
+
+                let fileElement;
+
+                if (fileType.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        fileElement = `<div class="file-preview-item">
+                                <img src="${e.target.result}" alt="Image" class="preview-image">
+                                <p>${fileName}</p>
+                               </div>`;
+                        fileListContainer.append(fileElement);
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    fileElement = `<div class="file-preview-item">
+                            <p><i class="fa fa-file"></i> ${fileName}</p>
+                          </div>`;
+                    fileListContainer.append(fileElement);
+                }
+            }
+        });
+
+
+        $('#message-form').submit(function(e) {
+            e.preventDefault();
+
+            const formData = new FormData();
+            formData.append('message', $('#message').val());
+            formData.append('receiver_id', $('#receiver_id').val());
+
+            const files = $('#file-input')[0].files;
+            for (let i = 0; i < files.length; i++) {
+                formData.append('files[]', files[i]);
             }
 
             $.ajax({
                 url: "<?= site_url('chat/sendMessage'); ?>",
                 type: "POST",
-                data: {
-                    message: message,
-                    receiver_id: receiver_id,
-                    files: $('#file-input')[0].files
-                },
-                dataType: "json",
+                data: formData,
+                processData: false,
+                contentType: false,
                 success: function(response) {
                     if (response.status === 'success') {
+                        loadMessages($('#receiver_id').val());
                         $('#message').val('');
-                        $('#file-input').val('');
-                        loadMessages(receiver_id);
-                    } else {
-                        alert(response.message);
                     }
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error sending message:", error);
                 }
             });
         });

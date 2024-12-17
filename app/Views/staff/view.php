@@ -6,7 +6,7 @@
     <div class="card">
         <div class="card-header row">
             <h3 class="mx-3">All Staffs</h3>
-            <a class="staff" href="<?= base_url('/staff');?>" role="button"><button type="button" class="btn btn-dark btn-rounded">Add Staff</button></a>
+            <a class="staff" href="<?= base_url('/staff'); ?>" role="button"><button type="button" class="btn btn-dark btn-rounded">Add Staff</button></a>
         </div>
         <div class="card-body">
             <table id="myTable" class="table table-striped table-hover table-active table-bordered">
@@ -92,7 +92,6 @@
                 });
             }
         });
-
     });
 </script>
 <?= $this->endSection(); ?>

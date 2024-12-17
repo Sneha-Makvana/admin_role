@@ -5,11 +5,11 @@
     <div class="card">
         <div class="card-header row">
             <h3 class="mx-3">All Meetings</h3>
-
-            <a class="staff" href="<?= base_url('/meeting');?>" role="button">
-                <button type="button" class="btn btn-dark btn-rounded">Add Meeting</button>
-            </a>
-
+            <?php if (session()->get('role') == 1) : ?>
+                <a class="staff" href="<?= base_url('/meeting'); ?>" role="button">
+                    <button type="button" class="btn btn-dark btn-rounded">Add Meeting</button>
+                </a>
+            <?php endif; ?>
         </div>
         <div class="card-body">
             <table id="myTable" class="table table-striped table-hover table-active">
@@ -43,6 +43,18 @@
                 success: function(data) {
                     var rows = '';
                     $.each(data, function(index, meetings) {
+                        let actionButtons = '';
+                        <?php if (session()->get('role') == 1) : ?>
+                            actionButtons = `
+                            <a href="<?= base_url('/meeting') ?>?id=${meetings.id}">
+                                <i class='ik ik-edit f-18 mr-15 text-green'></i>
+                            </a>
+                            <a href="javascript:void(0);" class="delete-btn" data-id="${meetings.id}">
+                                <i class='ik ik-trash-2 f-18 mr-15 text-red'></i>
+                            </a>
+                        `;
+                        <?php endif; ?>
+
                         rows += `
                         <tr id="meetings-${meetings.id}">
                             <td>${meetings.meeting_title}</td>
@@ -53,14 +65,9 @@
                             <td>${meetings.username}</td>
                             <td>
                                 <a href="<?= base_url('/meeting/profile') ?>?id=${meetings.id}">
-                                <i class='ik ik-eye f-18 mr-15 text-blue'></i>
+                                    <i class='ik ik-eye f-18 mr-15 text-blue'></i>
                                 </a>
-                                <a href="<?= base_url('/meeting') ?>?id=${meetings.id}">
-                                <i class='ik ik-edit f-18 mr-15 text-green'></i>
-                                </a>
-                                <a href="javascript:void(0);" class="delete-btn" data-id="${meetings.id}">
-                                <i class='ik ik-trash-2 f-18 mr-15 text-red'></i>
-                                </a>
+                                ${actionButtons} <!-- Edit and delete buttons only for role 1 -->
                             </td>
                         </tr>`;
                     });
@@ -84,9 +91,7 @@
                     success: function(response) {
                         if (response.success) {
                             $(`#meetings-${meetingId}`).remove();
-
                             loadMeetings();
-
                             alert(response.message);
                         } else {
                             alert(response.message);
@@ -98,7 +103,6 @@
                 });
             }
         });
-
     });
 </script>
 

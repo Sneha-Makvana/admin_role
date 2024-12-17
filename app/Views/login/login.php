@@ -26,6 +26,17 @@
                             <i class="ik ik-lock"></i>
                             <div class="error text-danger" id="passwordError"></div>
                         </div>
+                        <div class="row">
+                            <div class="col text-left">
+                                <!-- <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="item_checkbox" name="item_checkbox" value="option1">
+                                            <span class="custom-control-label">&nbsp;Remember Me</span>
+                                        </label> -->
+                            </div>
+                            <div class="col text-right">
+                                <a href="<?= base_url('/forgotPassword') ?>">Forgot Password ?</a>
+                            </div>
+                        </div>
                         <div id="message"></div>
                         <div class="sign-btn text-center">
                             <button type="button" id="submitBtn" class="btn btn-dark">Sign In</button>

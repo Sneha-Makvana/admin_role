@@ -14,6 +14,7 @@ class UserInfoModel extends Model
     {
         return $this->select('id, name, profile_image')->findAll();
     }
+    
 }
 
 ?>

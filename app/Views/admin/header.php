@@ -6,27 +6,24 @@
                 <div class="header-search">
                     <div class="input-group">
                         <span class="input-group-addon search-close"><i class="ik ik-x"></i></span>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" placeholder="Search...">
                         <span class="input-group-addon search-btn"><i class="ik ik-search"></i></span>
                     </div>
                 </div>
-                <!-- <button type="button" id="navbar-fullscreen" class="nav-link"><i class="ik ik-maximize"></i></button> -->
             </div>
+
             <div class="top-menu d-flex align-items-center">
-                <h6 class="mt-3"> </h6>
+                <h6 class="mt-3 me-3 text-dark">
+                    <?= esc(session()->get('username') ?? 'User'); ?>
+                </h6>
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                        <img class="avatar" src=" " alt="User Profile Image">
+                        <img class="avatar rounded-circle" src="<?= base_url('uploads/' . (session()->get('profile_image') ?? 'default.png')); ?>" alt="Profile Image" width="40" height="40">
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="profile_admin.php"><i class="ik ik-user dropdown-icon"></i> Profile</a>
-                        <a class="dropdown-item" href="change_pass.php"><i class="ik ik-lock dropdown-icon"></i> Change Password</a>
-
-                        <a class="dropdown-item" href="settings.php"><i class="ik ik-settings dropdown-icon"></i> Settings</a>
-                        <a class="dropdown-item" href="messages.php"><i class="ik ik-navigation dropdown-icon"></i> Message</a>
-
-                        <a class="dropdown-item" href="<?= base_url('/logout')?>"><i class="ik ik-power dropdown-icon"></i> Logout</a>
+                        <a class="dropdown-item" href="<?= base_url('/admin/profile'); ?>"><i class="ik ik-user dropdown-icon"></i> Profile</a>
+                        <a class="dropdown-item" href="<?= base_url('/admin/changePass'); ?>"><i class="ik ik-lock dropdown-icon"></i> Change Password</a>
+                        <a class="dropdown-item" href="<?= base_url('logout'); ?>"><i class="ik ik-power dropdown-icon"></i> Logout</a>
                     </div>
                 </div>
             </div>

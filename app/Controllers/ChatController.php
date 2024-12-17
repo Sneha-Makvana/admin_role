@@ -16,7 +16,21 @@ class ChatController extends Controller
     public function getUsers()
     {
         $userModel = new UserInfoModel();
-        $users = $userModel->findAll();
+        $role = session()->get('role');
+        $currentUserId = session()->get('user_id');
+
+        if ($role == 1) {
+            $users = $userModel
+                ->join('users', 'users.id = users_info.user_id')
+                ->where('users.role !=', 1)
+                ->where('users.id !=', $currentUserId)
+                ->findAll();
+        } else {
+            $users = $userModel
+                ->join('users', 'users.id = users_info.user_id')
+                ->where('users.role', 1)
+                ->findAll();
+        }
 
         return $this->response->setJSON(['success' => true, 'data' => $users]);
     }
@@ -42,13 +56,12 @@ class ChatController extends Controller
             $sender_id = session()->get('user_id');
 
             $fileNames = '';
-            if ($this->request->getFileMultiple('files')) {
-                $files = $this->request->getFileMultiple('files');
+            if ($files = $this->request->getFiles()) {
                 $fileNames = [];
-                foreach ($files as $file) {
+                foreach ($files['files'] as $file) {
                     if ($file->isValid() && !$file->hasMoved()) {
                         $newName = $file->getRandomName();
-                        $file->move(WRITEPATH . 'uploads', $newName);
+                        $file->move(FCPATH . 'uploads', $newName);
                         $fileNames[] = $newName;
                     }
                 }
@@ -63,7 +76,6 @@ class ChatController extends Controller
 
         throw new \CodeIgniter\Exceptions\PageNotFoundException('Page not found');
     }
-
 
     public function getMessages($receiver_id)
     {

@@ -146,19 +146,31 @@ class ProjectController extends Controller
             'message' => 'Project not found.'
         ]);
     }
-
     public function fetchAll()
     {
         $model = new ProjectModel();
+        $user_id = session()->get('user_id');
+        $role = session()->get('role');
 
-        $projects = $model
-            ->select('projects.id, projects.project_name, projects.description, projects.budget, projects.start_date, projects.end_date, projects.project_status, projects.project_files, users.username')
-            ->join('users', 'users.id = projects.user_id')
-            ->orderBy('projects.id', 'DESC')
-            ->findAll();
+        if ($role == 2) {
+            $projects = $model
+                ->select('projects.id, projects.project_name, projects.description, projects.budget, projects.start_date, projects.end_date, projects.project_status, projects.project_files, users.username')
+                ->join('users', 'users.id = projects.user_id')
+                ->where('projects.user_id', $user_id)
+                ->orderBy('projects.id', 'DESC')
+                ->findAll();
+        } else { 
+            $projects = $model
+                ->select('projects.id, projects.project_name, projects.description, projects.budget, projects.start_date, projects.end_date, projects.project_status, projects.project_files, users.username')
+                ->join('users', 'users.id = projects.user_id')
+                ->orderBy('projects.id', 'DESC')
+                ->findAll();
+        }
 
         return $this->response->setJSON($projects);
     }
+
+
     public function delete($id)
     {
         $model = new ProjectModel();
