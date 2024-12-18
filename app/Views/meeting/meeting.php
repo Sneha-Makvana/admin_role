@@ -198,7 +198,7 @@
                 formData.append('id', id);
             }
 
-            $(".error").html(""); 
+            $(".error").html("");
             $.ajax({
                 url: `<?= base_url('meeting/') ?>${formAction}`,
                 method: 'POST',
@@ -207,7 +207,7 @@
                 contentType: false,
                 success: function(response) {
                     if (response.success) {
-                        $("#responseMessage").html('<p class="text-success">' + response.message + ' <a href="<?= base_url('/meeting/view');?>">View</a>' + '</p>');
+                        $("#responseMessage").html('<p class="text-success">' + response.message + ' <a href="<?= base_url('/meeting/view'); ?>">View</a>' + '</p>');
                         if (!id) $("#addMeetingForm")[0].reset();
                     } else {
                         $.each(response.errors, function(key, value) {

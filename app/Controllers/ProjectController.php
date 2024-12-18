@@ -10,6 +10,9 @@ class ProjectController extends Controller
 {
     public function create()
     {
+        if (session()->get('role') != 1) {
+            return redirect()->to('/admin');
+        }
         $userModel = new UserModel();
 
         $staff = $userModel->where('role', 2)->findAll();
@@ -24,6 +27,9 @@ class ProjectController extends Controller
 
     public function insert()
     {
+        if (session()->get('role') != 1) {
+            return redirect()->to('/admin');
+        }
         $response = ['success' => false, 'message' => '', 'errors' => []];
 
         $validation = \Config\Services::validation();
@@ -159,7 +165,7 @@ class ProjectController extends Controller
                 ->where('projects.user_id', $user_id)
                 ->orderBy('projects.id', 'DESC')
                 ->findAll();
-        } else { 
+        } else {
             $projects = $model
                 ->select('projects.id, projects.project_name, projects.description, projects.budget, projects.start_date, projects.end_date, projects.project_status, projects.project_files, users.username')
                 ->join('users', 'users.id = projects.user_id')

@@ -11,12 +11,16 @@ $routes->get('/', 'LoginController::view');
 $routes->get('/login', 'LoginController::view');
 $routes->post('/login/authenticate', 'LoginController::authenticate');
 $routes->get('/logout', 'LoginController::logout');
-$routes->get('/forgotPassword', 'LoginController::ForgotPass');
+$routes->get('/forgotPassword', 'LoginController::forgotPassword');
+$routes->get('/resetPassword', 'LoginController::ResetPass');
 
+$routes->get('forgotPassword', 'LoginController::forgotPassword');
+$routes->post('sendResetLink', 'LoginController::sendResetLink');
+$routes->get('resetPassword/(:any)', 'LoginController::resetPassword/$1');
+$routes->post('updatePassword', 'LoginController::updatePassword');
 
 $routes->get('/admin', 'AdminController::dashboard');
-$routes->get('/admin/profile', 'AdminController::display');
-// $routes->get('profile', 'ProfileController::index'); 
+$routes->get('/profile', 'AdminController::display');
 $routes->post('profile/update', 'AdminController::update');
 $routes->get('/admin/changePass', 'AdminController::view');
 $routes->post('/admin/changePassword', 'AdminController::changePassword');
@@ -57,9 +61,6 @@ $routes->get('meeting/details/(:num)', 'MeetingController::details/$1');
 
 
 $routes->get('/chat', 'ChatController::view');
-// $routes->get('/chat/getUsers', 'ChatController::getUsers');
-// $routes->post('/chat/sendMessage', 'ChatController::sendMessage');
-// $routes->get('chat/getMessages/(:num)', 'ChatController::getMessages/$1');
 $routes->get('chat/getMessages/(:num)', 'ChatController::getMessages/$1');
 $routes->post('chat/sendMessage', 'ChatController::sendMessage');
 $routes->get('chat/getUsers', 'ChatController::getUsers');

@@ -21,7 +21,7 @@
                         <img class="avatar rounded-circle" src="<?= base_url('uploads/' . (session()->get('profile_image') ?? 'default.png')); ?>" alt="Profile Image" width="40" height="40">
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="<?= base_url('/admin/profile'); ?>"><i class="ik ik-user dropdown-icon"></i> Profile</a>
+                        <a class="dropdown-item" href="<?= base_url('/profile'); ?>"><i class="ik ik-user dropdown-icon"></i> Profile</a>
                         <a class="dropdown-item" href="<?= base_url('/admin/changePass'); ?>"><i class="ik ik-lock dropdown-icon"></i> Change Password</a>
                         <a class="dropdown-item" href="<?= base_url('logout'); ?>"><i class="ik ik-power dropdown-icon"></i> Logout</a>
                     </div>

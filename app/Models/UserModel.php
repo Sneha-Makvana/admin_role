@@ -16,5 +16,4 @@ class UserModel extends Model
             ->where('password', md5($password))
             ->first();
     }
-    
 }

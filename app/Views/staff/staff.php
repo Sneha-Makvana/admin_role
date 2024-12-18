@@ -196,7 +196,7 @@
                 contentType: false,
                 success: function(response) {
                     if (response.success) {
-                        $("#responseMessage").html('<p class="text-success">' + response.message + ' <a href="<?= base_url('/staff/view');?>">View</a>' +'</p>');
+                        $("#responseMessage").html('<p class="text-success">' + response.message + ' <a href="<?= base_url('/staff/view'); ?>">View</a>' + '</p>');
                     } else {
                         $.each(response.errors, function(key, value) {
                             $('#' + key + 'Error').html('<p class="text-danger">' + value + '</p>');

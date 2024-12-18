@@ -35,7 +35,6 @@
                             <h6 class="mb-0">Name</h6>
                         </div>
                         <div class="col-sm-9 text-secondary" id="users_info-name">
-
                         </div>
                     </div>
                     <hr>
@@ -44,7 +43,6 @@
                             <h6 class="mb-0">Email</h6>
                         </div>
                         <div class="col-sm-9 text-secondary" id="users-email">
-
                         </div>
                     </div>
                     <hr>
@@ -84,7 +82,7 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="<?= base_url('/staff/view');?>" class="btn btn-dark">Back to List</a>
+                            <a href="<?= base_url('/staff/view'); ?>" class="btn btn-dark">Back to List</a>
                         </div>
                     </div>
                 </div>

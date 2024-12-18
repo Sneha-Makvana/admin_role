@@ -11,16 +11,25 @@ class UserInfoController extends Controller
 {
     public function create()
     {
+        if (session()->get('role') != 1) {
+            return redirect()->to('/admin');
+        }
         return view('staff/staff');
     }
 
     public function view()
     {
+        if (session()->get('role') != 1) {
+            return redirect()->to('/admin');
+        }
         return view('staff/view');
     }
 
     public function insert()
     {
+        if (session()->get('role') != 1) {
+            return redirect()->to('/admin');
+        }
         if ($this->request->isAJAX()) {
             $validation = \Config\Services::validation();
 

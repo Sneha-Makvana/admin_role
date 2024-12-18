@@ -99,7 +99,7 @@
                                         <input type="radio" name="gender" value="male" <?= ($userInfo['gender'] === 'male') ? 'checked' : ''; ?>> Male
                                     </label>
                                     <label>
-                                        <input type="radio" name="gender" value="female" <?=  ($userInfo['gender'] === 'female') ? 'checked' : ''; ?>> Female
+                                        <input type="radio" name="gender" value="female" <?= ($userInfo['gender'] === 'female') ? 'checked' : ''; ?>> Female
                                     </label>
                                     <div id="genderError" class="text-danger"></div>
                                 </div>
@@ -145,7 +145,7 @@
                 contentType: false,
                 success: function(response) {
                     if (response.status === 'success') {
-                        $('#profileMessage').html('<div class="text-success">' + response.message + ' <a href="<?= base_url('/admin/profile'); ?>">View</a>' + '</div>');
+                        $('#profileMessage').html('<div class="text-success">' + response.message + ' <a href="<?= base_url('/profile'); ?>">View</a>' + '</div>');
                     } else {
                         $('#profileMessage').html('<div class="text-danger">' + response.message + '</div>');
                     }

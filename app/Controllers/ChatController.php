@@ -73,10 +73,8 @@ class ChatController extends Controller
 
             return $this->response->setJSON(['status' => 'success', 'message' => 'Message sent successfully!']);
         }
-
         throw new \CodeIgniter\Exceptions\PageNotFoundException('Page not found');
     }
-
     public function getMessages($receiver_id)
     {
         $sender_id = session()->get('user_id');
